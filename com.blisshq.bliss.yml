@@ -40,7 +40,6 @@ modules:
       - install -D $FLATPAK_ID.metainfo.xml $FLATPAK_DEST/share/metainfo/$FLATPAK_ID.metainfo.xml
 finish-args: 
   - "--env=JAVA_HOME=/app/jre"
-  - "--env=VMARGS=-Dbliss_working_directory=cache"
   - "--filesystem=xdg-music:rw"
   - "--share=network"
 
