@@ -1,0 +1,49 @@
+app-id: com.blisshq.bliss
+runtime: org.freedesktop.Platform
+runtime-version: "23.08"
+sdk: org.freedesktop.Sdk
+sdk-extensions: 
+  - org.freedesktop.Sdk.Extension.openjdk21
+command: /app/bin/run.sh
+cleanup:
+  - $FLATPAK_DEST/jre
+modules: 
+  - name: openjdk
+    buildsystem: simple
+    build-commands:
+      - /usr/lib/sdk/openjdk21/install.sh
+  - name: bliss
+    buildsystem: simple
+    sources:
+      - type: file
+        url: https://www.blisshq.com/downloads/bliss-install-20240123.jar
+        sha256: ba6d94e507eaf6307e3015b1210093fd23e6ffeadd26ace20970b598f5232a05
+    build-commands:
+      - yes 1 | /app/jre/bin/java -jar bliss-install-*.jar -console
+      - mkdir -p $FLATPAK_DEST/bliss
+      - mv 1/* $FLATPAK_DEST/bliss
+  - name: desktop
+    buildsystem: simple
+    sources:
+      - type: file
+        path: com.blisshq.bliss.metainfo.xml
+      - type: file
+        path: com.blisshq.bliss.desktop
+      - type: file
+        path: com.blisshq.bliss-128.svg
+    build-commands:
+      - install -D $FLATPAK_ID.svg $FLATPAK_DEST/share/icons/hicolor/scalable/apps/$FLATPAK_ID.svg
+      - install -D $FLATPAK_ID.desktop $FLATPAK_DEST/share/applications/$FLATPAK_ID.desktop
+      - install -D $FLATPAK_ID.metainfo.xml $FLATPAK_DEST/share/metainfo/$FLATPAK_ID.metainfo.xml
+  - name: script
+    buildsystem: simple
+    sources:
+      - type: file
+        path: run.sh
+    build-commands:
+      - install -D run.sh $FLATPAK_DEST/bin/run.sh
+finish-args: 
+  - "--env=JAVA_HOME=/app/jre"
+  - "--filesystem=xdg-music:rw"
+  - "--share=network"
+
