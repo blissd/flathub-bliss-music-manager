@@ -1,6 +1,6 @@
 # Flatpak Packaging for Bliss Music Manager
 
-This is experimental flatpak packaging for the (bliss)[https://www.blisshq.com] music manager.
+This is experimental flatpak packaging for the [bliss](https://www.blisshq.com) music manager.
 
 ## Build
 
