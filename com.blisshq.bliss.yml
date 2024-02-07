@@ -30,20 +30,17 @@ modules:
       - type: file
         path: com.blisshq.bliss.desktop
       - type: file
-        path: com.blisshq.bliss-128.svg
-    build-commands:
-      - install -D $FLATPAK_ID.svg $FLATPAK_DEST/share/icons/hicolor/scalable/apps/$FLATPAK_ID.svg
-      - install -D $FLATPAK_ID.desktop $FLATPAK_DEST/share/applications/$FLATPAK_ID.desktop
-      - install -D $FLATPAK_ID.metainfo.xml $FLATPAK_DEST/share/metainfo/$FLATPAK_ID.metainfo.xml
-  - name: script
-    buildsystem: simple
-    sources:
+        path: com.blisshq.bliss.svg
       - type: file
         path: run.sh
     build-commands:
       - install -D run.sh $FLATPAK_DEST/bin/run.sh
+      - install -D $FLATPAK_ID.svg $FLATPAK_DEST/share/icons/hicolor/scalable/apps/$FLATPAK_ID.svg
+      - install -D $FLATPAK_ID.desktop $FLATPAK_DEST/share/applications/$FLATPAK_ID.desktop
+      - install -D $FLATPAK_ID.metainfo.xml $FLATPAK_DEST/share/metainfo/$FLATPAK_ID.metainfo.xml
 finish-args: 
   - "--env=JAVA_HOME=/app/jre"
+  - "--env=VMARGS=-Dbliss_working_directory=$XDG_CACHE_HOME"
   - "--filesystem=xdg-music:rw"
   - "--share=network"
 

@@ -6,7 +6,7 @@
   <summary>Music Metadata Manager</summary>
 
   <metadata_license>CC0-1.0</metadata_license>
-  <project_license>GPL-2.0-or-later</project_license>
+  <project_license>LicenseRef-proprietary=https://www.blisshq.com/app/licence.html</project_license>
 
   <url type="homepage">https://www.blisshq.com/</url>
   <url type="help">https://www.blisshq.com/get-help.html</url>
@@ -48,17 +48,17 @@
 
   <developer>Dan Gravell</developer>
 
-	<screenshots>
-		<screenshot type="default">
-			<image type="source">https://www.blisshq.com/images/tour/overview/album-overview.png</image>
-		</screenshot>
-		<screenshot>
-			<image type="source">https://www.blisshq.com/images/tour/overview/completeness.jpg</image>
-		</screenshot>
-		<screenshot>
-			<image type="source">https://www.blisshq.com/images/tour/album-integrity/duplicate-music-files.png</image>
-		</screenshot>
-	</screenshots>
+  <screenshots>
+    <screenshot type="default">
+      <image type="source">https://www.blisshq.com/images/tour/overview/album-overview.png</image>
+    </screenshot>
+    <screenshot>
+      <image type="source">https://www.blisshq.com/images/tour/overview/completeness.jpg</image>
+    </screenshot>
+    <screenshot>
+      <image type="source">https://www.blisshq.com/images/tour/album-integrity/duplicate-music-files.png</image>
+    </screenshot>
+  </screenshots>
 
   <content_rating type="oars-1.1">
     <content_attribute id="violence-cartoon">none</content_attribute>
