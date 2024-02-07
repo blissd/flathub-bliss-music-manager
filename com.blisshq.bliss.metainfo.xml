@@ -39,7 +39,7 @@
   </description>
 
   <releases>
-    <release version="20240123" date="2024-01-23"/>
+    <release version="20240123" date="2024-01-23">
       <description>
         <ul>Fix album ordering bugs</ul>
       </description>

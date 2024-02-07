@@ -4,3 +4,4 @@ Comment=Music metadata fixer, cleaner, and updater.
 Exec=
 Type=Application
 Icon=com.blisshq.bliss
+Categories=Music;
