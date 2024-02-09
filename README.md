@@ -25,3 +25,5 @@ and cache files under this directory. Consequently, GNOME Software shows several
 user generated data for the installed app. It would be great to separate data, config, cache files into
 the appropriate `XDG_*` directories.
 
+The `svg` application icon is incorrect. I simply created one using the Emblem app for lack of
+a convenient icon file to use
