@@ -18,7 +18,10 @@ If you want to build and install, then run:
 flatpak-builder --user --install --force-clean build-dir com.blisshq.bliss.yml
 ```
 
-# Directories
+# Notes
 
-The working directory of bliss is set to `$XDG_DATA_DIR`. However, bliss will also store config
-and cache files under this directory.
+The working directory of `bliss` is set to `$XDG_DATA_DIR`. However, `bliss` will also store config
+and cache files under this directory. Consequently, GNOME Software shows several hundred megabytes of
+user generated data for the installed app. It would be great to separate data, config, cache files into
+the appropriate `XDG_*` directories.
+
